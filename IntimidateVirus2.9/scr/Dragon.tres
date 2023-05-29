@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bg2jfq6bxriud"]
+
+[ext_resource type="Script" path="res://scr/BaseEnemy.cs" id="1_vmrgl"]
+[ext_resource type="Texture2D" uid="uid://clmeiegh6qvn7" path="res://Inimigos/VirusAnima/Layer 1_sprite_1.png" id="2_pits0"]
+
+[resource]
+resource_name = "BabyDRagon"
+script = ExtResource("1_vmrgl")
+textute = ExtResource("2_pits0")

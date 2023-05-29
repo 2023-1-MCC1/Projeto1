@@ -1,0 +1,258 @@
+[gd_scene load_steps=25 format=3 uid="uid://dp8eux428223q"]
+
+[ext_resource type="Texture2D" uid="uid://clmeiegh6qvn7" path="res://Inimigos/VirusAnima/Layer 1_sprite_1.png" id="1_cadup"]
+[ext_resource type="Script" path="res://Cenas/Viros_1.cs" id="2_qfbhm"]
+[ext_resource type="Texture2D" uid="uid://dmrnow23sshr8" path="res://Inimigos/VirusAnima/Layer 1_sprite_2.png" id="3_lbvp4"]
+[ext_resource type="Texture2D" uid="uid://cr5e202to4icr" path="res://Inimigos/Virus02_Idel/Virus02_Idel0.png" id="4_7iqaw"]
+[ext_resource type="Texture2D" uid="uid://soy0ntdg8k43" path="res://Inimigos/Virus02_Idel/Virus02_Idel1.png" id="5_5y3xm"]
+[ext_resource type="Texture2D" uid="uid://b8qmipchn7sss" path="res://Inimigos/Ebola/sprite_0.png" id="6_bgnpa"]
+[ext_resource type="Texture2D" uid="uid://ds72tssq16s21" path="res://Inimigos/Ebola/sprite_1.png" id="7_a07ps"]
+[ext_resource type="Texture2D" uid="uid://3hf2a350ewn2" path="res://Inimigos/VZoster/sprite_0.png" id="9_mpa83"]
+[ext_resource type="Texture2D" uid="uid://jl5gmnf1mx5k" path="res://Inimigos/VZoster/VZoster0.png" id="9_u0ktf"]
+[ext_resource type="Texture2D" uid="uid://56liatl0b6n7" path="res://Inimigos/VZoster/sprite_1.png" id="10_ol4vv"]
+[ext_resource type="Texture2D" uid="uid://c0y1gjx460lol" path="res://Inimigos/VZoster/sprite_2.png" id="11_6162a"]
+[ext_resource type="Texture2D" uid="uid://b41tqq0jy1lcv" path="res://Inimigos/VZoster/sprite_3.png" id="12_0rj5e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_slwtf"]
+radius = 96.0
+
+[sub_resource type="Animation" id="Animation_o0i3o"]
+resource_name = "Viros01_Idel"
+length = 2.83335
+loop_mode = 1
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_cadup"), ExtResource("3_lbvp4"), ExtResource("1_cadup"), ExtResource("3_lbvp4"), ExtResource("1_cadup"), ExtResource("3_lbvp4")]
+}
+
+[sub_resource type="Animation" id="Animation_mh3vy"]
+resource_name = "Viros02_Idel"
+length = 1.33335
+loop_mode = 1
+step = 0.166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_7iqaw"), ExtResource("5_5y3xm"), ExtResource("4_7iqaw"), ExtResource("5_5y3xm")]
+}
+
+[sub_resource type="Animation" id="Animation_fer63"]
+resource_name = "Virus01_Damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mlkmu"]
+resource_name = "Virus02_Damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_7iqaw"), ExtResource("4_7iqaw")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.5, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jiquq"]
+resource_name = "Virus_Death"
+length = 1.00001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_270i3"]
+resource_name = "Virus_Ebola_Idel"
+loop_mode = 1
+step = 0.142857
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.285714, 0.571429, 0.857143),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_bgnpa"), ExtResource("7_a07ps"), ExtResource("6_bgnpa"), ExtResource("7_a07ps")]
+}
+
+[sub_resource type="Animation" id="Animation_km6rx"]
+resource_name = "Virus_VZoster_Idel"
+length = 1.00001
+loop_mode = 1
+step = 0.142857
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.285714, 0.571429, 0.857143),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("9_u0ktf"), ExtResource("9_u0ktf"), ExtResource("9_mpa83"), ExtResource("10_ol4vv"), ExtResource("11_6162a"), ExtResource("12_0rj5e")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.857143),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4kxf"]
+_data = {
+"Viros01_Idel": SubResource("Animation_o0i3o"),
+"Viros02_Idel": SubResource("Animation_mh3vy"),
+"Virus01_Damage": SubResource("Animation_fer63"),
+"Virus02_Damage": SubResource("Animation_mlkmu"),
+"Virus_Death": SubResource("Animation_jiquq"),
+"Virus_Ebola_Idel": SubResource("Animation_270i3"),
+"Virus_VZoster_Idel": SubResource("Animation_km6rx")
+}
+
+[sub_resource type="FontVariation" id="FontVariation_7lxt6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38oef"]
+bg_color = Color(1, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 2
+shadow_color = Color(0, 0, 0, 0.827451)
+shadow_size = 3
+shadow_offset = Vector2(0, 0.021)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ch5wx"]
+bg_color = Color(0.00784314, 1, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Viros_1" type="Sprite2D"]
+position = Vector2(615, 200)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_7iqaw")
+script = ExtResource("2_qfbhm")
+metadata/_edit_group_ = true
+
+[node name="Area2DViros01" type="Area2D" parent="."]
+
+[node name="CollisionShapeViros01" type="CollisionShape2D" parent="Area2DViros01"]
+shape = SubResource("CircleShape2D_slwtf")
+debug_color = Color(0.917647, 0.12549, 0.337255, 0.592157)
+
+[node name="AnimationViros01" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_g4kxf")
+}
+
+[node name="PanelEnemy" type="Panel" parent="."]
+clip_contents = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -144.0
+offset_top = -166.0
+offset_right = 20.0
+offset_bottom = -66.0
+grow_horizontal = 2
+
+[node name="NameEnemy" type="Label" parent="PanelEnemy"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Name:"
+
+[node name="LvlEnemy" type="Label" parent="PanelEnemy"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 40.0
+offset_bottom = 53.0
+rotation = -0.00979183
+pivot_offset = Vector2(22, 10)
+text = "Level:"
+
+[node name="BarraVidaEnemy" type="ProgressBar" parent="PanelEnemy"]
+layout_mode = 2
+offset_top = 58.0
+offset_right = 164.0
+offset_bottom = 85.0
+theme_override_fonts/font = SubResource("FontVariation_7lxt6")
+theme_override_styles/background = SubResource("StyleBoxFlat_38oef")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ch5wx")
+max_value = 1e+16
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="BarraVidaLabel" type="Label" parent="PanelEnemy/BarraVidaEnemy"]
+layout_mode = 0
+offset_right = 164.0
+offset_bottom = 28.0
+text = "HP: 50/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="Area2DViros01" to="." method="_on_area_2d_viros_01_area_entered"]
+[connection signal="body_entered" from="Area2DViros01" to="." method="_on_area_2d_viros_01_body_entered"]

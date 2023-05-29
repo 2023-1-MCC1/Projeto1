@@ -1,0 +1,285 @@
+[gd_scene load_steps=18 format=3 uid="uid://c2uagwisgklkb"]
+
+[ext_resource type="Script" path="res://Script/tela_fase_1.cs" id="1_dwaok"]
+[ext_resource type="Texture2D" uid="uid://cq0cj2wxt4ioy" path="res://Cenario/mapa principal.png" id="2_2g7eq"]
+[ext_resource type="Script" path="res://Script/PlayerCharac.cs" id="2_6aml3"]
+[ext_resource type="Texture2D" uid="uid://e7f5xr55of8e" path="res://Imagens/heros/GlobuloBranco_Anim/sprite_02.png" id="4_ura1x"]
+[ext_resource type="Texture2D" uid="uid://dh8aygmx737j" path="res://Imagens/heros/GlobuloBranco_Anim/sprite_00.png" id="5_2pc6n"]
+[ext_resource type="PackedScene" uid="uid://b38w7nxd6eelm" path="res://Prefabs/new_spawer.tscn" id="5_qv7v6"]
+[ext_resource type="Texture2D" uid="uid://cl8efvji7iba0" path="res://Imagens/heros/GlobuloBranco_Anim/sprite_03.png" id="6_ay8ah"]
+[ext_resource type="Texture2D" uid="uid://fvm4im37gy4d" path="res://Imagens/heros/GlobuloBranco_Anim/sprite_04.png" id="7_or3c3"]
+[ext_resource type="Texture2D" uid="uid://dpsqe5btywdrs" path="res://Imagens/heros/GlobuloBranco_Anim/sprite_05.png" id="8_ss41l"]
+[ext_resource type="Texture2D" uid="uid://dmlb7mnu01gsc" path="res://Imagens/heros/GlobuloBranco_Anim/sprite_06.png" id="9_x67sh"]
+[ext_resource type="Texture2D" uid="uid://bwpatvn7ngvre" path="res://livros.png" id="14_gc7q5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2fmo5"]
+
+[sub_resource type="Animation" id="Animation_mpr65"]
+resource_name = "GobluloB_Walk1"
+length = 1.00001
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.17, 0.37, 0.53, 0.74, 0.93),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("5_2pc6n"), ExtResource("5_2pc6n"), ExtResource("5_2pc6n"), ExtResource("5_2pc6n"), ExtResource("5_2pc6n"), ExtResource("5_2pc6n"), ExtResource("4_ura1x"), ExtResource("6_ay8ah"), ExtResource("7_or3c3"), ExtResource("8_ss41l"), ExtResource("9_x67sh")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kctto"]
+_data = {
+"GobluloB_Walk1": SubResource("Animation_mpr65")
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_so0ef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yug8w"]
+bg_color = Color(0.666667, 0, 0.141176, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hooat"]
+bg_color = Color(0.0352941, 0.788235, 0.133333, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="TelaFase1" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_dwaok")
+
+[node name="Tela1" type="Sprite2D" parent="."]
+position = Vector2(8, -1400)
+scale = Vector2(3, 3)
+texture = ExtResource("2_2g7eq")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="BloqueioStatic1" type="StaticBody2D" parent="Tela1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tela1/BloqueioStatic1"]
+position = Vector2(-19, 181.333)
+scale = Vector2(1.17848, 1.82196)
+polygon = PackedVector2Array(15.8397, -98.0629, 1219.65, -100.99, 1221.91, -70.254, 65.6213, -61.4723, 61.0957, 51.2269, 57.7778, 179.556, 58.8329, 616.186, 1018.26, 611.795, 1018.26, 636.677, 0.888889, 640.296)
+
+[node name="BloqueioStatic2" type="StaticBody2D" parent="Tela1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Tela1/BloqueioStatic2"]
+position = Vector2(1045, 0)
+polygon = PackedVector2Array(636.148, 1.48151, 348.444, -0.296295, 355.852, 45.6296, 565.333, 45.3333, 597.333, 586.667, 592, 1304, 106.667, 1293.33, 90.6667, 1344, 634.667, 1338.67, 641.482, 536.593)
+
+[node name="Node2D" type="Node2D" parent="Tela1"]
+position = Vector2(455.667, 458.667)
+
+[node name="Spaw1" type="Node2D" parent="."]
+position = Vector2(965, 556)
+
+[node name="PlayerCharac" type="CharacterBody2D" parent="Spaw1"]
+position = Vector2(-85, -196)
+script = ExtResource("2_6aml3")
+
+[node name="PlayerColli" type="CollisionShape2D" parent="Spaw1/PlayerCharac"]
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_2fmo5")
+debug_color = Color(0, 0.6, 0.882353, 0.835294)
+
+[node name="Sprite2D" type="Sprite2D" parent="Spaw1/PlayerCharac"]
+scale = Vector2(2, 2)
+texture = ExtResource("5_2pc6n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Spaw1/PlayerCharac"]
+autoplay = "GobluloB_Walk1"
+libraries = {
+"": SubResource("AnimationLibrary_kctto")
+}
+
+[node name="Camera2D" type="Camera2D" parent="Spaw1/PlayerCharac"]
+ignore_rotation = false
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = -1494
+limit_right = 2152
+limit_bottom = 656
+position_smoothing_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="Control" type="Control" parent="Spaw1/PlayerCharac/Camera2D"]
+clip_children = 1
+visibility_layer = 2
+clip_contents = true
+layout_mode = 3
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -507.0
+offset_top = -260.0
+offset_right = 508.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.99
+
+[node name="NewSpawer" parent="." instance=ExtResource("5_qv7v6")]
+position = Vector2(352, -224)
+metadata/_edit_group_ = true
+
+[node name="Save" type="Button" parent="."]
+offset_left = 536.0
+offset_top = -244.0
+offset_right = 584.0
+offset_bottom = -196.0
+text = "Save"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 936.0
+offset_top = -144.0
+offset_right = 1008.0
+offset_bottom = -60.0
+text = "Oi"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1391, -1040)
+texture = SubResource("ImageTexture_so0ef")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+offset = Vector2(10, 20)
+scale = Vector2(0.98, 0.95)
+transform = Transform2D(0.98, 0, 0, 0.95, 10, 20)
+
+[node name="CorpoPanel" type="Panel" parent="CanvasLayer"]
+z_as_relative = false
+clip_contents = true
+layout_direction = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1009.71
+offset_top = 635.789
+offset_right = -563.714
+offset_bottom = 715.789
+grow_horizontal = 0
+
+[node name="CorpoContainer" type="HBoxContainer" parent="CanvasLayer/CorpoPanel"]
+layout_mode = 0
+offset_top = 49.4736
+offset_right = 500.0
+offset_bottom = 74.4736
+scale = Vector2(0.880559, 1.16842)
+
+[node name="CorpoProgressBar" type="ProgressBar" parent="CanvasLayer/CorpoPanel/CorpoContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_yug8w")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hooat")
+max_value = 1e+16
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="VidaCorpoLabel" type="Label" parent="CanvasLayer/CorpoPanel/CorpoContainer/CorpoProgressBar"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 1.0
+offset_right = 446.0
+offset_bottom = 25.0
+scale = Vector2(0.908892, 0.691357)
+text = "HP: 50/50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/CorpoPanel"]
+layout_mode = 0
+offset_left = 0.285713
+offset_top = 16.6315
+offset_right = 90.2857
+offset_bottom = 49.6315
+text = "Corpo
+"
+
+[node name="PanelNotificacao" type="Panel" parent="CanvasLayer"]
+clip_contents = true
+custom_minimum_size = Vector2(500, 100)
+layout_direction = 2
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.856
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 3.67993
+offset_right = -4.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(250, 50)
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="LabelNoti" type="Label" parent="CanvasLayer/PanelNotificacao"]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 26.0
+text = "teste"
+vertical_alignment = 1
+autowrap_mode = 2
+clip_text = true
+
+[node name="LabelTicke" type="Label" parent="CanvasLayer/PanelNotificacao"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 40.0
+offset_bottom = 42.0
+text = "teste"
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+clip_contents = true
+offset_left = 6.12245
+offset_top = -4.21053
+offset_right = 106.122
+offset_bottom = 95.7895
+metadata/_edit_group_ = true
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Panel"]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -50.0
+offset_bottom = 50.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("14_gc7q5")
+texture_disabled = ExtResource("14_gc7q5")
+texture_focused = ExtResource("14_gc7q5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Panel/TextureButton" to="." method="_on_texture_button_pressed"]

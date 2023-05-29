@@ -1,0 +1,118 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvrybvnpuokq5"]
+
+[ext_resource type="Script" path="res://Script/tela_dificuldade.cs" id="1_t3fgn"]
+[ext_resource type="Texture2D" uid="uid://bdkgmcr7lhbwc" path="res://Imagens/TelaInicial.png" id="1_vw6xh"]
+[ext_resource type="Texture2D" uid="uid://c8v2jjganxm4" path="res://Imagens/ContinenteSulAmerica.jpg" id="2_wpogv"]
+[ext_resource type="Texture2D" uid="uid://bs0gm7cmneayj" path="res://Imagens/Europa.jpg" id="4_g80au"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nugr7"]
+content_margin_left = 40.0
+
+[node name="TelaDificuldade" type="Node2D"]
+script = ExtResource("1_t3fgn")
+
+[node name="TelaInicial" type="Sprite2D" parent="."]
+position = Vector2(550, 350)
+texture = ExtResource("1_vw6xh")
+
+[node name="Label" type="Label" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 349.0
+offset_top = 37.0
+offset_right = 920.0
+offset_bottom = 109.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 50
+text = "Escolha Sua Dificuldade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmericasMedio" type="Button" parent="."]
+self_modulate = Color(0, 0.0117647, 0, 1)
+offset_left = 472.0
+offset_top = 140.0
+offset_right = 793.0
+offset_bottom = 607.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="AmericasMedio"]
+scale = Vector2(0.447222, 0.517778)
+texture = ExtResource("2_wpogv")
+centered = false
+
+[node name="TitleLabel" type="Label" parent="AmericasMedio/Sprite2D"]
+offset_left = 138.634
+offset_right = 456.634
+offset_bottom = 100.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 33
+theme_override_constants/outline_size = 23
+theme_override_constants/shadow_outline_size = 28
+theme_override_constants/line_spacing = 3
+theme_override_font_sizes/font_size = 71
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nugr7")
+text = "Americas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DifculdadeLabel" type="Label" parent="AmericasMedio/Sprite2D"]
+offset_left = 15.6522
+offset_top = 820.815
+offset_right = 446.652
+offset_bottom = 890.815
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 48
+text = "Dificuldade: Médio
+"
+
+[node name="EuropaFacil" type="Button" parent="."]
+offset_left = 107.0
+offset_top = 141.0
+offset_right = 423.0
+offset_bottom = 599.0
+flat = true
+metadata/_edit_group_ = true
+
+[node name="EuropaIcon" type="Sprite2D" parent="EuropaFacil"]
+show_behind_parent = true
+texture_filter = 2
+texture_repeat = 3
+scale = Vector2(0.550347, 0.744337)
+texture = ExtResource("4_g80au")
+centered = false
+
+[node name="TitleEuropaLabel" type="Label" parent="EuropaFacil"]
+layout_mode = 0
+offset_right = 314.0
+offset_bottom = 66.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 9
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 45
+text = "Europa
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DificuldadeEuropaLabel" type="Label" parent="EuropaFacil"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 419.0
+offset_right = 210.0
+offset_bottom = 457.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 25
+text = "Dificuldade: Fácil"
+
+[connection signal="pressed" from="AmericasMedio" to="." method="_on_americas_medio_pressed"]
+[connection signal="pressed" from="EuropaFacil" to="." method="_on_europa_facil_pressed"]

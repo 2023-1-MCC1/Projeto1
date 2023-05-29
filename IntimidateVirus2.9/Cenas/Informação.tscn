@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://ceevk0864wnml"]
+
+[ext_resource type="Texture2D" uid="uid://cx4qiqll30uqf" path="res://Cenario/BG/battleback3.png" id="1_5xkcc"]
+[ext_resource type="Script" path="res://Cenas/Informação.cs" id="1_tgicn"]
+[ext_resource type="Texture2D" uid="uid://bww56myk6fxs" path="res://Cartas/NEW INFLUENZA CARD.png" id="3_jsuox"]
+[ext_resource type="Texture2D" uid="uid://cmf38vl10ygei" path="res://Cartas/carta EBOLA.jpg" id="4_wcowm"]
+[ext_resource type="Texture2D" uid="uid://diibchs7wapq7" path="res://Cartas/carta V- Zoster.jpg" id="5_jj4hb"]
+[ext_resource type="Texture2D" uid="uid://bo0peamqrm0w1" path="res://Cartas/carta yersinia pestis.jpg" id="6_v6wmv"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tgicn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1106.0
+offset_bottom = 718.0
+texture = ExtResource("1_5xkcc")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 2.0
+offset_top = 661.0
+offset_right = 31.0
+offset_bottom = 719.0
+theme_override_font_sizes/font_size = 36
+text = "<"
+
+[node name="Carta_Influenza" type="TextureButton" parent="."]
+offset_right = 161.0
+offset_bottom = 236.0
+texture_normal = ExtResource("3_jsuox")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Carta_Ebola" type="TextureButton" parent="."]
+offset_left = 164.0
+offset_top = 5.0
+offset_right = 328.0
+offset_bottom = 229.0
+texture_normal = ExtResource("4_wcowm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Carta_VZoster" type="TextureButton" parent="."]
+offset_left = 340.0
+offset_top = 7.0
+offset_right = 504.0
+offset_bottom = 231.0
+texture_normal = ExtResource("5_jj4hb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Carta_Yersinia" type="TextureButton" parent="."]
+offset_left = 519.0
+offset_top = 10.0
+offset_right = 683.0
+offset_bottom = 234.0
+texture_normal = ExtResource("6_v6wmv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="button_up" from="Carta_Influenza" to="." method="_on_carta_influenza_button_up"]
+[connection signal="pressed" from="Carta_Ebola" to="." method="_on_carta_ebola_pressed"]
+[connection signal="pressed" from="Carta_VZoster" to="." method="_on_carta_v_zoster_pressed"]
+[connection signal="pressed" from="Carta_Yersinia" to="." method="_on_carta_yersinia_pressed"]

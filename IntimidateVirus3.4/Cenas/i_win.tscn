@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu6rkon21h4vv"]
+
+[ext_resource type="Texture2D" uid="uid://ct6gwyv8o2kit" path="res://Imagens/Vitoria.jpg" id="1_1n54s"]
+[ext_resource type="Script" path="res://Cenas/i_win.cs" id="1_uc0lb"]
+[ext_resource type="Texture2D" uid="uid://cnq0pkdfvqe3k" path="res://Imagens/butoon.png" id="3_7qlbp"]
+
+[node name="IWIn" type="Node2D"]
+script = ExtResource("1_uc0lb")
+
+[node name="B8Fc701b-33Ba-4130-9f4a-b2913c25360d" type="Sprite2D" parent="."]
+position = Vector2(517.25, 356.5)
+scale = Vector2(1.02423, 0.754115)
+texture = ExtResource("1_1n54s")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 379.0
+offset_top = -6.0
+offset_right = 811.0
+offset_bottom = 250.0
+theme_override_colors/font_color = Color(0, 0.937255, 0.992157, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_font_sizes/font_size = 50
+text = "YOU WIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 479.0
+offset_top = 402.0
+offset_right = 661.0
+offset_bottom = 466.0
+flat = true
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BackButton"]
+position = Vector2(0, -17)
+scale = Vector2(0.189583, 0.205208)
+texture = ExtResource("3_7qlbp")
+centered = false
+
+[node name="Label" type="Label" parent="BackButton"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 182.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

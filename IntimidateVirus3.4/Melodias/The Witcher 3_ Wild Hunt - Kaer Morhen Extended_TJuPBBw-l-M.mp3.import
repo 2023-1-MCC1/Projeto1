@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfrpl003ijpub"
+path="res://.godot/imported/The Witcher 3_ Wild Hunt - Kaer Morhen Extended_TJuPBBw-l-M.mp3-7307a08d614a50ba569d9680341a5566.mp3str"
+
+[deps]
+
+source_file="res://Melodias/The Witcher 3_ Wild Hunt - Kaer Morhen Extended_TJuPBBw-l-M.mp3"
+dest_files=["res://.godot/imported/The Witcher 3_ Wild Hunt - Kaer Morhen Extended_TJuPBBw-l-M.mp3-7307a08d614a50ba569d9680341a5566.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

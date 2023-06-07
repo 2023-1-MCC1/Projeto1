@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://dju6q15rji4i"]
+
+[ext_resource type="Script" path="res://Script/game_over.cs" id="1_4ejya"]
+[ext_resource type="Texture2D" uid="uid://b54kyeto45i8g" path="res://Imagens/_b8fc701b-33ba-4130-9f4a-b2913c25360d.jpg" id="2_r80ob"]
+[ext_resource type="Texture2D" uid="uid://cnq0pkdfvqe3k" path="res://Imagens/butoon.png" id="3_joa42"]
+
+[node name="GameOver" type="Node2D"]
+script = ExtResource("1_4ejya")
+
+[node name="B8Fc701b-33Ba-4130-9f4a-b2913c25360d" type="Sprite2D" parent="."]
+position = Vector2(517.25, 356.5)
+scale = Vector2(1.02423, 0.754115)
+texture = ExtResource("2_r80ob")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 285.0
+offset_top = 13.0
+offset_right = 717.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(0.976471, 0, 0.0156863, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_font_sizes/font_size = 104
+text = "YOU DIE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 429.0
+offset_top = 424.0
+offset_right = 611.0
+offset_bottom = 488.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="BackButton"]
+position = Vector2(0, -17)
+scale = Vector2(0.189583, 0.205208)
+texture = ExtResource("3_joa42")
+centered = false
+
+[node name="Label" type="Label" parent="BackButton"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 182.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 26
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

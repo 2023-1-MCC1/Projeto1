@@ -52,4 +52,25 @@ position = Vector2(578, 276)
 scale = Vector2(0.463326, 0.463326)
 texture = ExtResource("4_p1x65")
 
+[node name="CREDITButton" type="Button" parent="."]
+offset_left = 485.0
+offset_top = 624.0
+offset_right = 675.0
+offset_bottom = 698.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CREDITButton"]
+scale = Vector2(0.195833, 0.158333)
+texture = ExtResource("2_b4wnd")
+centered = false
+
+[node name="Label" type="Label" parent="CREDITButton/Sprite2D"]
+offset_right = 996.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 110
+text = "CREDIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Star_Button" to="." method="_on_star_button_pressed"]
+[connection signal="pressed" from="CREDITButton" to="." method="_on_credit_button_pressed"]

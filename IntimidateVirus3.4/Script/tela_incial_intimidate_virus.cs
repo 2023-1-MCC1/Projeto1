@@ -16,8 +16,15 @@ public partial class tela_incial_intimidate_virus : Node2D
 	{
 		GetTree().ChangeSceneToFile("res://Cenas/tela_dificuldade.tscn");
 
+		}
+		
+	private void _on_credit_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://Cenas/credit.tscn");
 	}
 }
+
+
 
 
 

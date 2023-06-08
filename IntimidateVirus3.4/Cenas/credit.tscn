@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4vuo8vs04v4k"]
+
+[ext_resource type="Script" path="res://Credit.cs" id="1_a1tgo"]
+[ext_resource type="Texture2D" uid="uid://j6vljoixo1tb" path="res://Imagens/BackGround_intimidate.jpg" id="2_sdkr7"]
+[ext_resource type="Texture2D" uid="uid://1r1ep4ystry4" path="res://Imagens/Mapa africa.jpg" id="3_xtmbj"]
+[ext_resource type="Texture2D" uid="uid://cnq0pkdfvqe3k" path="res://Imagens/butoon.png" id="4_6yv0b"]
+
+[node name="Credit" type="Node2D"]
+script = ExtResource("1_a1tgo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 1, 1)
+scale = Vector2(1.00781, 0.755647)
+texture = ExtResource("2_sdkr7")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(56, 56)
+scale = Vector2(0.898438, 0.601562)
+texture = ExtResource("3_xtmbj")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 72.0
+offset_right = 888.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 59
+text = "INTIMIDATE VIRUS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 200.0
+offset_right = 968.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 41
+text = "                             Membros
+VICTOR LOPES DOMINGUES - 23024580	
+GUSTAVO MUSSATO DOMINGO - 20010579
+FLAVIO HENRIQUE OLIVEIRA - 23024838
+ALEXSANDER Sudario Abreu - 20010480"
+
+[node name="BACKButton" type="Button" parent="."]
+offset_left = 416.0
+offset_top = 560.0
+offset_right = 600.0
+offset_bottom = 632.0
+
+[node name="Sprite2D" type="Sprite2D" parent="BACKButton"]
+scale = Vector2(0.191667, 0.15)
+texture = ExtResource("4_6yv0b")
+centered = false
+
+[node name="Label" type="Label" parent="BACKButton/Sprite2D"]
+offset_right = 960.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 149
+text = "BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="BACKButton" to="." method="_on_back_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cdj36017dcxqy"]
+[gd_scene load_steps=48 format=3 uid="uid://cdj36017dcxqy"]
 
 [ext_resource type="Script" path="res://scr/battle.cs" id="1_2e6ni"]
 [ext_resource type="Texture2D" uid="uid://cphlf11ev1mmf" path="res://Cenario/BG/battleback2.png" id="1_gqe83"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dh8aygmx737j" path="res://Imagens/heros/GlobuloBranco_Anim/sprite_00.png" id="9_rryk8"]
 [ext_resource type="Texture2D" uid="uid://lbcn1016be3l" path="res://Imagens/heros/GlobuloBranco_Anim/Hero_Idel/sprite_idel1.png" id="10_twuim"]
 [ext_resource type="Texture2D" uid="uid://c8cvc8ekjtv7q" path="res://Imagens/heros/GlobuloBranco_Anim/Hero_Idel/sprite_idel2.png" id="11_tm4b8"]
-[ext_resource type="AudioStream" uid="uid://b1v24gdb0kew6" path="res://Melodias/Musica Épica Lendária de Combate - Música Heroica - Música de Guerra - Motivacional_JZ7gphSem5c.mp3" id="12_dn1i3"]
 [ext_resource type="Texture2D" uid="uid://dqfntby1dhufb" path="res://Imagens/heros/GlobuloBranco_Anim/Hero_Idel/sprite_idel3.png" id="12_vcydp"]
 [ext_resource type="Texture2D" uid="uid://wpxj52ykdta8" path="res://Imagens/heros/GlobuloBranco_Anim/Hero_Idel2/sprite_1.png" id="13_2kowp"]
 [ext_resource type="Texture2D" uid="uid://4vxys48x8xny" path="res://Imagens/heros/GlobuloBranco_Anim/Hero_Idel2/sprite_2.png" id="14_4g6cr"]
@@ -629,11 +628,6 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12_dn1i3")
-volume_db = -5.049
-autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true

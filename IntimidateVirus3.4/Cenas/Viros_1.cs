@@ -147,16 +147,7 @@ public partial class Viros_1 : Sprite2D
 				AnimationViros01.Play("Virus_Ebola_Idel");
 				
 				break;
-			case 99:
-				Global.name = "AIDS";
-				Global.EnemyMax_health = 200 * Global.enemy_level;
-				Global.EnemyHealth = Global.EnemyMax_health;
-				Global.EnemyDamage = 50 * Global.enemy_level;
-				Global.EnemySpeed = 2;
-				this.Scale =  new Vector2 ( 3f, 3f);
-				this.Position = new Vector2(1000, 900);
-				AnimationViros01.Play("Virus_AIDS");
-				break;
+			
 				
 			default:
 				Global.name = "Yersinia pestis";
@@ -213,10 +204,6 @@ public partial class Viros_1 : Sprite2D
 					case 5:
 					AnimationViros01.Play("Virus_Ebola_Idel");
 					
-					break;
-					case 99:
-					
-					AnimationViros01.Play("Virus_AIDS");
 					break;
 					
 					

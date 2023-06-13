@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dp8eux428223q"]
+[gd_scene load_steps=31 format=3 uid="uid://dp8eux428223q"]
 
 [ext_resource type="Texture2D" uid="uid://bh2aq6lw5bwyn" path="res://Inimigos/Virus03_Idel0/sprite_1.png" id="1_48h40"]
 [ext_resource type="Texture2D" uid="uid://clmeiegh6qvn7" path="res://Inimigos/VirusAnima/Layer 1_sprite_1.png" id="1_cadup"]
@@ -16,10 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cu3572jakslvi" path="res://Inimigos/Virus03_Idel0/sprite_0.png" id="14_skw5r"]
 [ext_resource type="Texture2D" uid="uid://0p6m51j647io" path="res://Inimigos/Virus03_Idel0/sprite_2.png" id="15_u2psv"]
 [ext_resource type="Texture2D" uid="uid://j3dcfsftvn6p" path="res://Inimigos/Virus03_Idel0/sprite_3.png" id="16_wwr4p"]
-[ext_resource type="Texture2D" uid="uid://duv3dcw3s0ot4" path="res://Inimigos/AIDS/sprite_0.png" id="17_kcpdj"]
-[ext_resource type="Texture2D" uid="uid://dehh3krafnixc" path="res://Inimigos/AIDS/sprite_1.png" id="18_n3bp8"]
-[ext_resource type="Texture2D" uid="uid://ikxqangkf18a" path="res://Inimigos/AIDS/sprite_2.png" id="19_i6dim"]
-[ext_resource type="Texture2D" uid="uid://by0fa2ys57vok" path="res://Inimigos/AIDS/sprite_3.png" id="20_3tcvo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_slwtf"]
 radius = 96.0
@@ -123,18 +119,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_l1don"]
 resource_name = "Virus_AIDS"
 loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.5, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("17_kcpdj"), ExtResource("18_n3bp8"), ExtResource("19_i6dim"), ExtResource("20_3tcvo")]
-}
 
 [sub_resource type="Animation" id="Animation_jiquq"]
 resource_name = "Virus_Death"
@@ -236,7 +220,7 @@ corner_radius_bottom_left = 3
 [node name="Viros_1" type="Sprite2D"]
 position = Vector2(615, 200)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("17_kcpdj")
+texture = ExtResource("1_cadup")
 script = ExtResource("2_qfbhm")
 metadata/_edit_group_ = true
 

@@ -14,8 +14,8 @@
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="INTIMIDATE VIRUS" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<img src="https://user-images.githubusercontent.com/46869529/245512441-b1aa8b0b-99a5-406f-ade3-6a306dbf8c24.png" alt="INTIMIDATE VIRUS" border="0">
+  Intimidate Virus <a></a>
 </p>
 
 

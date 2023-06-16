@@ -119,7 +119,14 @@ Coloque código do prompt de comnando se for necessário
 Aqui estão as referências usadas no projeto.
 
 1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
+2. <https://brasil.un.org/pt-br/sdgs/3>
 3. <https://creativecommons.org/share-your-work/>
 4. <https://freesound.org/>
-5. 
+5. <https://brasil.un.org/pt-br/sdgs/4>
+6. <https://www.crunchyroll.com/series/GR3KVPQER/cells-at-work>
+7. <https://www.youtube.com/watch?v=ifXGvlAn0bY&t=1051s>
+8. <https://www.piskelapp.com/>
+
+
+
+

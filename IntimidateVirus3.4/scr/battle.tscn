@@ -1,9 +1,9 @@
 [gd_scene load_steps=48 format=3 uid="uid://cdj36017dcxqy"]
 
 [ext_resource type="Script" path="res://scr/battle.cs" id="1_2e6ni"]
-[ext_resource type="Texture2D" uid="uid://cphlf11ev1mmf" path="res://Cenario/BG/battleback2.png" id="1_gqe83"]
 [ext_resource type="FontFile" uid="uid://4wb0uoya7ri3" path="res://Cenario/NESCyrillic (1).ttf" id="2_jejf7"]
 [ext_resource type="Resource" uid="uid://bg2jfq6bxriud" path="res://scr/Dragon.tres" id="2_ulohs"]
+[ext_resource type="Texture2D" uid="uid://doollrcei5sir" path="res://Cenario/Mapa jogo.png" id="3_1inp5"]
 [ext_resource type="FontFile" uid="uid://daldtq52hb7xw" path="res://Cenario/Nes.tres" id="4_uemqh"]
 [ext_resource type="FontFile" uid="uid://c2x16k1bomy47" path="res://Cenario/Adventurer.ttf" id="5_oulel"]
 [ext_resource type="Texture2D" uid="uid://clmeiegh6qvn7" path="res://Inimigos/VirusAnima/Layer 1_sprite_1.png" id="5_pj5is"]
@@ -289,9 +289,11 @@ enemy = ExtResource("2_ulohs")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1159.0
-offset_bottom = 722.0
-texture = ExtResource("1_gqe83")
+offset_left = -3708.0
+offset_top = 2.0
+offset_right = 1578.0
+offset_bottom = 5041.0
+texture = ExtResource("3_1inp5")
 
 [node name="EnemyPanel" type="Panel" parent="."]
 visible = false
